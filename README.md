@@ -31,5 +31,12 @@ $$H_{p}= -J_{p} \sum_{(i,j)} \delta(s_{i}, s_{j})$$ with which we can calculate 
    - A button which starts a **temperature sweep**, which progressively changes the temperature and measures the **mean** and **standard deviation** of the **energy** and **magnetization**
    - A button which includes also the **diagonal neighbouring elements** instead of just the usual up, down, left and right
    - A slider to introduce an external magnetic field and a slider to specify the direction of said magnetic field
+
+## Phase transition plot
+- As an output of the temperature sweep we can show the (depending on $q$) first or second order phase transiton of the system represented in the Heat capacity and Magnetic susceptibility:
+<p align="center">
+  <img src="https://github.com/pankmadafaki/rt-Potts/blob/main/ising.png?raw=true"/>
+</p>
+
  
 
