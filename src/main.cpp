@@ -11,10 +11,10 @@
 #include <sciplot/sciplot.hpp>
 #include <vector>
 #define RAYGUI_IMPLEMENTATION
-#include "../include/raylib.h"
 #include "../include/raygui.h"
-#define RECS_WIDTH 3
-#define RECS_HEIGHT 3
+#include "../include/raylib.h"
+#define RECS_WIDTH 8
+#define RECS_HEIGHT 8
 #define N_LEVELS_DEFAULT 1
 #define MAX_RECS_X 1000 / RECS_WIDTH
 #define MAX_RECS_Y 1000 / RECS_HEIGHT
@@ -223,14 +223,10 @@ int main() {
       0, MAX_RECS_X - 1); // For lattice position selection
   std::uniform_int_distribution<> uniform_q(0, n_levels); // For spin selection
   raylib::Window w(screenWidth, screenHeight, "Ising model");
-  GuiLoadStyle(
-      "include/dark.rgs"); //
-  Font fontTtf = LoadFontEx(
-      "include/PixelOperator.ttf",
-      32, 0, 250); //    Load
+  GuiLoadStyle("include/dark.rgs");                                   //
+  Font fontTtf = LoadFontEx("include/PixelOperator.ttf", 32, 0, 250); //    Load
   // dark
   // style
-  
 
   raylib::Rectangle recs[MAX_RECS_X * MAX_RECS_Y] = {0};
   // Lattice Initialization
@@ -428,7 +424,7 @@ int main() {
 
         // Create canvas to hold figure
         sciplot::Canvas canvas = {{fig}};
-        canvas.size(1100, 1100);
+        canvas.size(800, 800);
         canvas.show();
         canvas.cleanup();
         print_float(s_list);
